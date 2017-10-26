@@ -1,0 +1,6 @@
+framework module Pods_DinoWeiBo {
+  umbrella header "Pods-DinoWeiBo-umbrella.h"
+
+  export *
+  module * { export * }
+}

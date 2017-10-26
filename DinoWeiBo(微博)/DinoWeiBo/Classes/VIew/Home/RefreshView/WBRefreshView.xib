@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="rJC-Eg-D8h" customClass="WBRefreshView" customModule="DinoWeiBo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="160" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="tableview_loading" translatesAutoresizingMaskIntoConstraints="NO" id="0U9-mI-QVK">
+                    <rect key="frame" x="0.0" y="14" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="ct6-pu-H8p"/>
+                        <constraint firstAttribute="width" constant="32" id="hTL-kd-dey"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正在刷新数据..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5F-P2-MCh">
+                    <rect key="frame" x="40" y="22" width="98" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LRz-DC-5w6">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="60"/>
+                    <subviews>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="tableview_pull_refresh" translatesAutoresizingMaskIntoConstraints="NO" id="Dx1-X7-4tX">
+                            <rect key="frame" x="0.0" y="14" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="KK9-Yl-fzT"/>
+                                <constraint firstAttribute="width" constant="32" id="MQv-XL-RHI"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下拉开始刷新..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ehg-YI-ALV">
+                            <rect key="frame" x="32" y="22" width="98" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Dx1-X7-4tX" firstAttribute="leading" secondItem="LRz-DC-5w6" secondAttribute="leading" id="6Yc-Ox-Nvw"/>
+                        <constraint firstItem="Ehg-YI-ALV" firstAttribute="leading" secondItem="Dx1-X7-4tX" secondAttribute="trailing" id="Th3-Rm-TBK"/>
+                        <constraint firstItem="Dx1-X7-4tX" firstAttribute="centerY" secondItem="LRz-DC-5w6" secondAttribute="centerY" id="U6M-XR-MuJ"/>
+                        <constraint firstItem="Ehg-YI-ALV" firstAttribute="centerY" secondItem="LRz-DC-5w6" secondAttribute="centerY" id="XjG-Ic-vyC"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LRz-DC-5w6" secondAttribute="bottom" id="CEm-Av-jBb"/>
+                <constraint firstAttribute="trailing" secondItem="LRz-DC-5w6" secondAttribute="trailing" id="LE9-Cw-bcn"/>
+                <constraint firstItem="0U9-mI-QVK" firstAttribute="centerY" secondItem="E5F-P2-MCh" secondAttribute="centerY" id="LN5-27-lfQ"/>
+                <constraint firstItem="0U9-mI-QVK" firstAttribute="centerY" secondItem="rJC-Eg-D8h" secondAttribute="centerY" id="apJ-yb-7hu"/>
+                <constraint firstItem="0U9-mI-QVK" firstAttribute="leading" secondItem="rJC-Eg-D8h" secondAttribute="leading" id="cko-zS-DdW"/>
+                <constraint firstItem="0U9-mI-QVK" firstAttribute="leading" secondItem="rJC-Eg-D8h" secondAttribute="leading" id="lc6-bI-iqF"/>
+                <constraint firstItem="E5F-P2-MCh" firstAttribute="leading" secondItem="0U9-mI-QVK" secondAttribute="trailing" constant="8" symbolic="YES" id="mxf-V3-w9D"/>
+                <constraint firstItem="LRz-DC-5w6" firstAttribute="leading" secondItem="rJC-Eg-D8h" secondAttribute="leading" id="u7W-Os-onu"/>
+                <constraint firstItem="LRz-DC-5w6" firstAttribute="top" secondItem="rJC-Eg-D8h" secondAttribute="top" id="yxk-uZ-jQw"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="loadingIconView" destination="0U9-mI-QVK" id="rI5-eo-MEX"/>
+                <outlet property="tipIconView" destination="Dx1-X7-4tX" id="8XJ-mc-Ceg"/>
+                <outlet property="tipView" destination="LRz-DC-5w6" id="4bC-RO-r5h"/>
+            </connections>
+            <point key="canvasLocation" x="-218" y="-528"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="tableview_loading" width="32" height="32"/>
+        <image name="tableview_pull_refresh" width="32" height="32"/>
+    </resources>
+</document>

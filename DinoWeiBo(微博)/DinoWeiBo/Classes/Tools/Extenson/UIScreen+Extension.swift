@@ -1,0 +1,71 @@
+//
+//  UIScreen+Extension.swift
+//  DinoWeiBo
+//
+//  Created by liu yao on 2017/3/28.
+//  Copyright © 2017年 深圳多诺信息科技有限公司. All rights reserved.
+//
+
+import Foundation
+import UIKit
+
+/// 屏幕型号枚举
+///
+/// - Mini: 3.5寸屏
+/// - Small: 4寸屏
+/// - Mid: 4.7寸屏
+/// - Plus: 5.5寸屏
+/// - Unkonw: 未知
+enum CEScreenModeType : CGFloat {
+    case Mini = 480  // 480 * 2 = 960
+    case Small = 568  // 568 * 2 = 1136
+    case Mid = 667  // 667 * 2 = 1334
+    case Plus = 736   // 736 * 3 = 2208
+    case Unkonw
+    
+    var description: String {
+        get {
+            switch self {
+            case .Mini:
+                return "3.5寸屏"
+            case .Small:
+                return "4.9寸屏"
+            case .Mid:
+                return "4.7寸屏"
+            case .Plus:
+                return "5.5寸屏"
+            default:
+                return "未知"
+            }
+        }
+    }
+}
+
+
+extension UIScreen {
+    
+    /// 屏幕的高（pt）
+    class var height : CGFloat {
+        get {
+            return  UIScreen.main.bounds.size.height
+        }
+    }
+    
+    /// 屏幕的宽（pt）
+    class var width : CGFloat {
+        get {
+            return  UIScreen.main.bounds.size.width
+        }
+    }
+    
+    /// 当前屏幕的尺寸大小
+    class var mode : CEScreenModeType {
+        get {
+            guard let type = CEScreenModeType.init(rawValue: UIScreen.height) else {
+                return .Unkonw
+            }
+            return type
+        }
+    }
+    
+}
